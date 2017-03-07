@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Centipede", "Centipede\Cent
 EndProject
 Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "CentipedeContent", "Centipede\CentipedeContent\CentipedeContent.contentproj", "{B0EA1FCD-330E-4C26-99F0-BC1BA6B01EEF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameManagement", "Centipede\GameManagement\GameManagement.csproj", "{6CEB5F37-0BFA-4A0D-8DB7-B25ECD81CAAE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -19,6 +21,10 @@ Global
 		{BA93CF3F-CB4F-4116-B382-C6703314CDB2}.Release|x86.Build.0 = Release|x86
 		{B0EA1FCD-330E-4C26-99F0-BC1BA6B01EEF}.Debug|x86.ActiveCfg = Debug|x86
 		{B0EA1FCD-330E-4C26-99F0-BC1BA6B01EEF}.Release|x86.ActiveCfg = Release|x86
+		{6CEB5F37-0BFA-4A0D-8DB7-B25ECD81CAAE}.Debug|x86.ActiveCfg = Debug|x86
+		{6CEB5F37-0BFA-4A0D-8DB7-B25ECD81CAAE}.Debug|x86.Build.0 = Debug|x86
+		{6CEB5F37-0BFA-4A0D-8DB7-B25ECD81CAAE}.Release|x86.ActiveCfg = Release|x86
+		{6CEB5F37-0BFA-4A0D-8DB7-B25ECD81CAAE}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
