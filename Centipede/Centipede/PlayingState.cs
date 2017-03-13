@@ -12,6 +12,7 @@ namespace Centipede
         Player player;
         Bullet bullet;
         GameObjectList snake, mushroom;
+        Score score;
 
         public GameObjectList Mushroom
         {
@@ -39,12 +40,39 @@ namespace Centipede
             }
         }
 
+        internal Score Score
+        {
+            get
+            {
+                return score;
+            }
+
+            set
+            {
+                score = value;
+            }
+        }
+
+        internal Player Player
+        {
+            get
+            {
+                return player;
+            }
+
+            set
+            {
+                player = value;
+            }
+        }
+
         public PlayingState()
         {
             player = new Player();
             bullet = new Bullet();
             snake = new GameObjectList();
             mushroom = new GameObjectList();
+            score = new Score();
 
             for (int i = 0; i < 9; i++)
             {
@@ -60,6 +88,7 @@ namespace Centipede
             this.Add(bullet);
             this.Add(snake);
             this.Add(mushroom);
+            this.Add(score);
         }
 
         public override void HandleInput(InputHelper inputHelper)

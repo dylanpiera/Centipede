@@ -38,6 +38,11 @@ namespace Centipede
                 }
             }
 
+            if(this.CollidesWith(PS.Player))
+            {
+                Centipede.GameStateManager.SwitchTo(Centipede.gameoverState);
+            }
+
         }
     }
 }

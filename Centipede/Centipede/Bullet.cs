@@ -47,6 +47,7 @@ namespace Centipede
             {
                 if (this.CollidesWith(item))
                 {
+                    PS.Score.ScoreValue += 10;
                     this.Reset();
                     PS.Mushroom.Add(new Mushroom(item.Position));
                     PS.Snake.Remove(item);

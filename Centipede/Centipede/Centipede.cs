@@ -16,7 +16,7 @@ namespace Centipede
     /// </summary>
     public class Centipede : GameEnvironment
     {
-        public const String playingState = "playingState";
+        public const String playingState = "playingState", gameoverState = "gameoverState";
 
         public Centipede()
         {            
@@ -36,6 +36,7 @@ namespace Centipede
             SetFullScreen(false);
 
             gameStateManager.AddGameState(playingState, new PlayingState());
+            GameStateManager.AddGameState(gameoverState, new GameoverState());
             gameStateManager.SwitchTo(playingState);
 
             // TODO: Add game states to GameStateManager here
