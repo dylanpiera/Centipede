@@ -26,5 +26,33 @@ namespace Centipede
             this.Position = startPos;
             this.Velocity = new Vector2(0, -200);
         }
+
+        public override void Update(GameTime gameTime)
+        {
+            base.Update(gameTime);
+
+            PlayingState PS = GameWorld as PlayingState;
+
+            foreach (Mushroom item in PS.Mushroom.Objects)
+            {
+                if (this.CollidesWith(item))
+                {
+                    this.Reset();
+                    PS.Mushroom.Remove(item);
+                    break;
+                }
+            }
+
+            foreach (SnakeSegment item in PS.Snake.Objects)
+            {
+                if (this.CollidesWith(item))
+                {
+                    this.Reset();
+                    PS.Mushroom.Add(new Mushroom(item.Position));
+                    PS.Snake.Remove(item);
+                    break;
+                }
+            }
+        }
     }
 }

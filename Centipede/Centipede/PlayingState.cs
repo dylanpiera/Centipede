@@ -11,17 +11,46 @@ namespace Centipede
     {
         Player player;
         Bullet bullet;
-        GameObjectList snake;
+        GameObjectList snake, mushroom;
+
+        public GameObjectList Mushroom
+        {
+            get
+            {
+                return mushroom;
+            }
+
+            set
+            {
+                mushroom = value;
+            }
+        }
+
+        public GameObjectList Snake
+        {
+            get
+            {
+                return snake;
+            }
+
+            set
+            {
+                snake = value;
+            }
+        }
 
         public PlayingState()
         {
             player = new Player();
             bullet = new Bullet();
             snake = new GameObjectList();
+            mushroom = new GameObjectList();
 
             for (int i = 0; i < 9; i++)
             {
                 this.snake.Add(new SnakeSegment(new Vector2(0+(32 * i),0)));
+                this.mushroom.Add(new Mushroom());
+                this.mushroom.Add(new Mushroom());
             }
 
             player.Position = new Vector2(235, 500);
@@ -30,6 +59,7 @@ namespace Centipede
             this.Add(player);
             this.Add(bullet);
             this.Add(snake);
+            this.Add(mushroom);
         }
 
         public override void HandleInput(InputHelper inputHelper)

@@ -28,6 +28,16 @@ namespace Centipede
             {
                 this.Bounce();
             }
+
+            PlayingState PS = GameWorld as PlayingState;
+            foreach (Mushroom item in PS.Mushroom.Objects)
+            {
+                if(this.CollidesWith(item))
+                {
+                    this.Bounce();
+                }
+            }
+
         }
     }
 }
